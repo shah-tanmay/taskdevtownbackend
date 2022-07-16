@@ -55,7 +55,7 @@ router.post("/forgetpassword", async (req, res) => {
     await sendMail(
       email,
       "Reset Pass for your Task",
-      `<h4>Someone (hopefully you) has requested a password reset for your account. Follow the link below to set a new password:</h4><a href="http://localhost:3000/reset?token=${token}">Reset Password Here</a>`
+      `<h4>Someone (hopefully you) has requested a password reset for your account. Follow the link below to set a new password:</h4><a href="https://delightful-buttercream-12ecde.netlify.app/reset?token=${token}">Reset Password Here</a>`
     );
     return res.status(200).send(url);
   } catch (error) {
