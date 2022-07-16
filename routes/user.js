@@ -51,7 +51,7 @@ router.post("/forgetpassword", async (req, res) => {
         expiresIn: "10m",
       }
     );
-    const url = `http://localhost:3000/reset?token=${token}`;
+    const url = `https://delightful-buttercream-12ecde.netlify.app/reset?token=${token}`;
     await sendMail(
       email,
       "Reset Pass for your Task",
